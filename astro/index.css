@@ -891,10 +891,6 @@ video {
     line-height: 2.25rem;
   }
 }
-html {
-  height: 100vh;
-  overflow: hidden;
-}
 #stars {
   width: 1px;
   height: 1px;
