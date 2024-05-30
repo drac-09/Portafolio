@@ -377,6 +377,9 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -611,9 +614,16 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-.bg-\[\#090a0f\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 10 15 / var(--tw-bg-opacity));
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+.from-slate-950 {
+  --tw-gradient-from: #020617 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(2 6 23 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-slate-900 {
+  --tw-gradient-to: #0f172a var(--tw-gradient-to-position);
 }
 .fill-none {
   fill: none;
@@ -672,9 +682,9 @@ video {
 .text-\[16px\] {
   font-size: 16px;
 }
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-xl {
   font-size: 1.25rem;
@@ -1568,12 +1578,6 @@ html {
     height: 600px;
     width: 1000px;
   }
-}
-@font-face {
-  font-family: TitilliumWeb;
-  src: url(/Portafolio/font/Cairo-Light.ttf);
-  font-family: Inconsolata;
-  src: url(/Portafolio/font/Inconsolata_Condensed-Light.ttf);
 }
 .Flex-web[data-astro-cid-dywszb22] {
   display: flex;
