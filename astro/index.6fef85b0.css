@@ -892,9 +892,6 @@ video {
 }
 html {
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: absolute;
   overflow: hidden;
 }
 body {
