@@ -889,8 +889,8 @@ html {
 }
 body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  background-attachment: absolute;
-  height: 100vh;
+  background-attachment: fixed;
+  height: 100%;
 }
 #stars {
   width: 1px;
