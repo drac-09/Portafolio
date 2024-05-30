@@ -318,9 +318,6 @@ video {
   --tw-contain-paint: ;
   --tw-contain-style: ;
 }
-.fixed {
-  position: fixed;
-}
 .absolute {
   position: absolute;
 }
@@ -831,9 +828,6 @@ video {
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
   .md\:m-0 {
     margin: 0;
   }
@@ -891,11 +885,12 @@ video {
   }
 }
 html {
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
 }
 body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-attachment: absolute;
+  height: 100%;
 }
 #stars {
   width: 1px;
