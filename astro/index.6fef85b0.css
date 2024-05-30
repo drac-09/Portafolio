@@ -892,11 +892,13 @@ video {
 }
 html {
   height: 100vh;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   background-size: cover;
   background-position: center;
   background-attachment: absolute;
   overflow: hidden;
+}
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 #stars {
   width: 1px;
