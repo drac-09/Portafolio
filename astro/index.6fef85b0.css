@@ -10,17 +10,18 @@
 :after {
   --tw-content: "";
 }
-html {
+html,
+:host {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   font-feature-settings: normal;
   font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   margin: 0;
@@ -58,6 +59,8 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
   font-size: 1em;
 }
 small {
@@ -92,6 +95,7 @@ textarea {
   font-size: 100%;
   font-weight: inherit;
   line-height: inherit;
+  letter-spacing: inherit;
   color: inherit;
   margin: 0;
   padding: 0;
@@ -101,9 +105,9 @@ select {
   text-transform: none;
 }
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+input:where([type="button"]),
+input:where([type="reset"]),
+input:where([type="submit"]) {
   -webkit-appearance: button;
   background-color: transparent;
   background-image: none;
@@ -256,6 +260,10 @@ video {
   --tw-backdrop-opacity: ;
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
+  --tw-contain-size: ;
+  --tw-contain-layout: ;
+  --tw-contain-paint: ;
+  --tw-contain-style: ;
 }
 ::backdrop {
   --tw-border-spacing-x: 0;
@@ -305,6 +313,10 @@ video {
   --tw-backdrop-opacity: ;
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
+  --tw-contain-size: ;
+  --tw-contain-layout: ;
+  --tw-contain-paint: ;
+  --tw-contain-style: ;
 }
 .fixed {
   position: fixed;
@@ -426,7 +438,9 @@ video {
   }
 }
 .animate-fade-down {
-  animation: fade-down 1s both;
+  animation: fade-down var(--tw-animate-duration, 1s)
+    var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s)
+    var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
 }
 @keyframes fade-left {
   0% {
@@ -439,7 +453,9 @@ video {
   }
 }
 .animate-fade-left {
-  animation: fade-left 1s both;
+  animation: fade-left var(--tw-animate-duration, 1s)
+    var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s)
+    var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
 }
 @keyframes fade-right {
   0% {
@@ -452,7 +468,9 @@ video {
   }
 }
 .animate-fade-right {
-  animation: fade-right 1s both;
+  animation: fade-right var(--tw-animate-duration, 1s)
+    var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s)
+    var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
 }
 @keyframes fade-up {
   0% {
@@ -465,7 +483,9 @@ video {
   }
 }
 .animate-fade-up {
-  animation: fade-up 1s both;
+  animation: fade-up var(--tw-animate-duration, 1s)
+    var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s)
+    var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
 }
 @keyframes borderEraser {
   to {
@@ -691,38 +711,57 @@ video {
     var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
     var(--tw-backdrop-sepia);
 }
+.animate-fade-down,
+.animate-fade-left,
+.animate-fade-right,
+.animate-fade-up,
+.animate-write_h1,
+.animate-write_h2 {
+  animation-composition: var(--tw-animate-composition);
+}
 .animate-delay-\[0s\] {
-  animation-delay: 0s;
+  --tw-animate-delay: 0s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-delay-\[100ms\] {
-  animation-delay: 0.1s;
+  --tw-animate-delay: 0.1s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-delay-\[1s\] {
-  animation-delay: 1s;
+  --tw-animate-delay: 1s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-delay-\[200ms\] {
-  animation-delay: 0.2s;
+  --tw-animate-delay: 0.2s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-delay-\[300ms\] {
-  animation-delay: 0.3s;
+  --tw-animate-delay: 0.3s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-delay-\[3500ms\] {
-  animation-delay: 3.5s;
+  --tw-animate-delay: 3.5s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-delay-\[4s\] {
-  animation-delay: 4s;
+  --tw-animate-delay: 4s;
+  animation-delay: var(--tw-animate-delay);
 }
 .animate-duration-500 {
-  animation-duration: 0.5s;
+  --tw-animate-duration: 0.5s;
+  animation-duration: var(--tw-animate-duration);
 }
 .animate-fill-both {
-  animation-fill-mode: both;
+  --tw-animate-fill: both;
+  animation-fill-mode: var(--tw-animate-fill);
 }
 .animate-once {
-  animation-iteration-count: 1;
+  --tw-animate-iteration: 1;
+  animation-iteration-count: var(--tw-animate-iteration);
 }
 .animate-ease-in-out {
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --tw-animate-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: var(--tw-animate-easing);
 }
 .hover\:border-\[\#00ed64\]:hover {
   --tw-border-opacity: 1;
@@ -856,7 +895,7 @@ html {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: absolute;
   overflow: hidden;
 }
 #stars {
@@ -1513,10 +1552,10 @@ html {
 }
 @keyframes animStar {
   0% {
-    transform: translateY(0);
+    transform: translateY(-2000px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(0);
   }
 }
 .Center {
