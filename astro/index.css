@@ -611,6 +611,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.bg-\[\#090a0f\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 10 15 / var(--tw-bg-opacity));
+}
 .fill-none {
   fill: none;
 }
@@ -886,11 +890,7 @@ video {
 }
 html {
   height: 100vh;
-}
-body {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  background-attachment: absolute;
-  /* height: 100%; */
+  overflow: hidden;
 }
 #stars {
   width: 1px;
